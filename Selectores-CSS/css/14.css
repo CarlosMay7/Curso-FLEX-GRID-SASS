@@ -1,0 +1,3 @@
+p:not(.texto):not(.oferta){ /*Para uno es solo colocar :not(elemento a excluir) y para agregar mas es :not():not():not*/
+    color: rebeccapurple
+}

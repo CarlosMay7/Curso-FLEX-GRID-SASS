@@ -1,0 +1,3 @@
+.admin > div { /*El > es el primer nivel de hijos*/
+    border: 2px solid purple; 
+}

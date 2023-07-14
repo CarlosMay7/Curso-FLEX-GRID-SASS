@@ -1,0 +1,19 @@
+.texto {
+    background-color: violet;
+}
+
+.azul {
+    color: blue;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.texto.mayusculas {
+    font-size: 7rem;
+}
+
+.texto.azul {
+    text-align: end;
+}

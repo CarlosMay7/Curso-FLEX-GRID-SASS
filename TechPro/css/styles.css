@@ -224,7 +224,8 @@ img {
 
 @media (min-width: 1600px) {
     .sobre-tech {
-        background-size: 100%, 2100rem;
+        background-size: 100%, 120rem;
+        background-position: top right;
     }
 }
 
@@ -332,7 +333,7 @@ img {
 
 .modelo-z {
     background-color: var(--primario);
-    columns: var(--blanco);
+    color: var(--blanco);
     background-image: url(/img/modelo-z.svg);
 }
 
@@ -437,6 +438,22 @@ img {
     font-size: 2rem;
     font-weight: 900;
     border: none;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.formulario input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 15rem;
+}
+
+@media (min-width: 450px) {
+    .footer {
+        margin: 1rem 0;
+    }
 }
 
 .footer p {
@@ -446,4 +463,5 @@ img {
     font-size: 2.4rem;
     color: var(--primario);
     padding: 2rem 0;
+    margin: 0;
 }

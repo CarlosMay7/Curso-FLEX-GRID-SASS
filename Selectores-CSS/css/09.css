@@ -1,0 +1,3 @@
+.admin div + p { /*El + es para seleccionar el primer elemento despues del seleccionado, en este caso el primer p despues del div en la clase admin*/
+    background-color: rebeccapurple;
+}

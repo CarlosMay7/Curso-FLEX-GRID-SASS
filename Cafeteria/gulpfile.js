@@ -3,6 +3,8 @@ const { src, dest, watch, series, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
+const cssnano = require("cssnano");
 
 //Imagenes
 // const imagemin = require("gulp-imagemin");
@@ -12,8 +14,10 @@ const avif = require("gulp-avif");
 function css(){
 
     return src("src/scss/app.scss") //De donde toma el archivo a compilar
+        .pipe(sourcemaps.init()) //Inicia el sourcemap
         .pipe(sass({outputStyle: "compressed"})) //Compila, como argumentos puede recibir un objeto con valores como el tipo de output
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write(".")) //Lo guarda en la misma ubicacion con el .
         .pipe( dest("build/css")); //Donde lo guarda
 }
 
